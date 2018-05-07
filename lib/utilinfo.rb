@@ -9,9 +9,9 @@ class Utilinfo
 		if Gem.win_platform?
 			include WinUtilinfo
 		elsif nix_name && $?.success?
-			if nix_name.downcase.include?('linux')
+			if nix_name.to_s.downcase.include?('linux')
 				include LinuxUtilinfo
-			elsif nix_name.downcase.include?('darwin')
+			elsif nix_nameto_s..downcase.include?('darwin')
 				include MacUtilinfo
 			end
 		else
