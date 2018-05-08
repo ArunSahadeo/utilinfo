@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require "linux_utilinfo"
+require "win_utilinfo"
+require "mac_utilinfo"
 require "utilinfo/version"
 
 class Utilinfo
