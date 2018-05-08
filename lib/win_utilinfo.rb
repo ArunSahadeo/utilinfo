@@ -1,7 +1,5 @@
-require "utilinfo/version"
+require 'win_utilinfo/memory_methods'
 
 module WinUtilinfo
-	def get_total_memory
-		puts "test" 
-	end
+	include MemoryMethods
 end
