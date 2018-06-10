@@ -1,9 +1,9 @@
-require "utilinfo/version"
+require 'win_utilinfo/hardware_methods'
+require 'win_utilinfo/memory_methods'
+require 'win_utilinfo/operating_system_methods'
 
 module WinUtilinfo
-	class Utilinfo
-		def get_total_memory
-			puts "test" 
-		end
-	end
+	include HardwareMethods
+	include MemoryMethods
+	include OperatingSystemMethods
 end
