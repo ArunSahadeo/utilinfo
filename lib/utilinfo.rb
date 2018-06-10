@@ -11,7 +11,7 @@ class Utilinfo
 		elsif nix_name && $?.success?
 			if nix_name.to_s.downcase.include?('linux')
 				include LinuxUtilinfo
-			elsif nix_nameto_s..downcase.include?('darwin')
+      elsif nix_name.to_s.downcase.include?('darwin')
 				include MacUtilinfo
 			end
 		else

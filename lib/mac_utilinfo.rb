@@ -1,10 +1,11 @@
-require "utilinfo/version"
+require 'mac_utilinfo/hardware_methods'
+require 'mac_utilinfo/memory_methods'
+require 'mac_utilinfo/operating_system_methods'
+require 'mac_utilinfo/environment_methods'
 
 module MacUtilinfo
-	class Utilinfo
-		def get_total_memory
-			memory_total_in_kb = `cat /proc/meminfo | grep -i 'MemTotal' | awk '{print $2 " " $3}'` 
-			return memory_total_in_kb
-		end
-	end
+	include HardwareMethods
+	include MemoryMethods
+	include OperatingSystemMethods
+	include EnvironmentMethods
 end
